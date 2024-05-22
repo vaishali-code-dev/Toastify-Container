@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.toaster {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+  border-radius: 0.6rem;
+}
+
+.slide {
+  animation: slide 0.5s ease-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pop {
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.cancelBtn {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.toaster-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 4px #cecece;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:active {
+  animation: click-animation 0.1s forwards;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
